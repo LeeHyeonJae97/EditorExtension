@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+
+    #ROOTNAMESPACEBEGIN#
+public class #SCRIPTNAME# : EditorWindow
+{
+    [MenuItem("Window/#SCRIPTNAME#")]
+    static void Init()
+    {	
+        GetWindow<#SCRIPTNAME#>().Show();
+    }
+
+    void OnEnable()
+    {
+        #NOTRIM#
+    }
+
+    void OnDisable()
+    {
+        #NOTRIM#
+    }
+
+    void OnGUI()
+    {
+        #NOTRIM#
+    }
+}
+#ROOTNAMESPACEEND#

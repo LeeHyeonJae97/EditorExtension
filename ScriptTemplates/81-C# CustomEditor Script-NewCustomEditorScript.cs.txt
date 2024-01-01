@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+
+    #ROOTNAMESPACEBEGIN#
+[CustomEditor(typeof(#SCRIPTNAME#))]
+public class #SCRIPTNAME# : Editor
+{
+    void OnEnable()
+    {
+        #NOTRIM#
+    }
+
+    public override void OnInspectorGUI()
+    {
+        #NOTRIM#
+    }
+}
+#ROOTNAMESPACEEND#
