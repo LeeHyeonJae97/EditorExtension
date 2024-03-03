@@ -54,6 +54,26 @@ public static class EditorPrefs
     {
         return _string != null && _string.TryGetValue(key, out var value) ? value : defaultValue;
     }
+
+    public static void SetBool(string key, bool value)
+    {
+        _bool[key] = value;
+    }
+
+    public static void SetInt(string key, int value)
+    {
+        _int[key] = value;
+    }
+
+    public static void SetFloat(string key, float value)
+    {
+        _float[key] = value;
+    }
+
+    public static void SetString(string key, string value)
+    {
+        _string[key] = value;
+    }
 }
 
 [System.Serializable]

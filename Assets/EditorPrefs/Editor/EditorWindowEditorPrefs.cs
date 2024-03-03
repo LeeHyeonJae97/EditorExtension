@@ -74,18 +74,18 @@ public class EditorWindowEditorPrefs : EditorWindow
     {
         var serializedObject = new SerializedObject(this);
 
-        EditorGUI.DrawProperty(serializedObject.FindProperty(nameof(_bool)));
-        EditorGUI.DrawProperty(serializedObject.FindProperty(nameof(_int)));
-        EditorGUI.DrawProperty(serializedObject.FindProperty(nameof(_float)));
-        EditorGUI.DrawProperty(serializedObject.FindProperty(nameof(_string)));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(_bool)));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(_int)));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(_float)));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(_string)));
 
-        EditorGUI.DrawSpace(5f);
-        EditorGUI.DrawButton("Delete All", () =>
+        EditorGUILayout.Space(5f);
+        if (GUILayout.Button("Delete All"))
         {
             UnityEditor.EditorPrefs.DeleteAll();
 
             OnEnable();
-        });
+        }
 
         if (serializedObject.hasModifiedProperties)
         {
